@@ -19,7 +19,6 @@
     "bn.js": "^5.2.1",
     "buffer": "^6.0.3",
     "classnames": "^2.3.2",
-    "formik": "^2.2.9",
     "nanoid": "^4.0.0",
     "nft.storage": "^7.0.3",
     "react": "^18.2.0",

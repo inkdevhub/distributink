@@ -1,4 +1,3 @@
-import { Formik } from "formik";
 import { useUI } from "../hooks";
 import { Header } from "./Header";
 import { useState } from "react";
