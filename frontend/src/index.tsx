@@ -1,19 +1,47 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import { BrowserRouter as Router } from "react-router-dom";
+import {
+  MyContractProvider,
+  UIProvider,
+} from "./contexts";
+import { InkConfig, UseInkProvider } from "useink";
+import { Astar, Shiden, Shibuya } from "useink/chains";
+import { NotificationsProvider } from "useink/notifications";
+import { Notifications } from "./components/Notifications";
+
+const config: InkConfig = {
+  config: {
+    dappName: "Pink Robot - AI generator and minter",
+    chains: [Astar],
+    caller: {
+      default: "5EyR7vEk7DtvEWeefGcXXMV6hKwB8Ex5uvjHufm466mbjJkR",
+    },
+  },
+};
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <UseInkProvider {...config}>
+        <NotificationsProvider>
+          <UIProvider>
+            <PinkContractProvider>
+              <PinkPsp34ContractProvider>
+                <App />
+                <Notifications />
+              </PinkPsp34ContractProvider>
+            </PinkContractProvider>
+          </UIProvider>
+        </NotificationsProvider>
+      </UseInkProvider>
+    </Router>
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
