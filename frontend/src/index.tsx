@@ -14,7 +14,7 @@ import { Notifications } from "./components/Notifications";
 
 const config: InkConfig = {
   config: {
-    dappName: "Pink Robot - AI generator and minter",
+    dappName: "Distribut-ink native tokens",
     chains: [Astar],
     caller: {
       default: "5EyR7vEk7DtvEWeefGcXXMV6hKwB8Ex5uvjHufm466mbjJkR",
@@ -32,12 +32,10 @@ root.render(
       <UseInkProvider {...config}>
         <NotificationsProvider>
           <UIProvider>
-            <PinkContractProvider>
-              <PinkPsp34ContractProvider>
+            <MyContractProvider>
                 <App />
                 <Notifications />
-              </PinkPsp34ContractProvider>
-            </PinkContractProvider>
+            </MyContractProvider>
           </UIProvider>
         </NotificationsProvider>
       </UseInkProvider>
