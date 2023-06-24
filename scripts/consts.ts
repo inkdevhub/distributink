@@ -21,7 +21,7 @@ export const networks: Array<NetworkInfo> = [
   {
     name: "Astar",
     endpoint: "wss://rpc.astar.network",
-    contractAddress: '0',
+    contractAddress: 'Z5Wsctz3adkDeoJaTejFFrgWPQGbwqMCunwNqRhjv6uJHA8',
     tokenUnit: "ASTR",
   },
   {
