@@ -5,7 +5,7 @@ import { WeightV2, DispatchError } from '@polkadot/types/interfaces';
 import { ISubmittableResult } from '@polkadot/types/types';
 import { ApiBase } from '@polkadot/api/base';
 import { SubmittableExtrinsic } from '@polkadot/api/types';
-import distributink from '../frontend/src/distributink.json';
+import distributink from './distributink.json';
 import { endpoint } from './consts';
 
 export interface WeightInfo {
