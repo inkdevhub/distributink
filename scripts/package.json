@@ -1,0 +1,20 @@
+{
+  "name": "distributink",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:swanky-dapps/distributink.git",
+  "author": "Bobo <bobo.kovacevic@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "distribute": "ts-node ./distribute.ts"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1"
+  },
+  "dependencies": {
+    "@polkadot/api-contract": "^10.9.1",
+    "@types/node": "^20.3.1",
+    "dotenv": "^16.3.1",
+    "typescript": "^5.1.3"
+  }
+}
