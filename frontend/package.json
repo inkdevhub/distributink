@@ -26,22 +26,24 @@
     "react-router-dom": "^6.11.1",
     "react-twitter-embed": "^4.0.4",
     "typescript": "^5.0.4",
-    "useink": "^1.4.4",
+    "useink": "^1.9.2",
     "web-vitals": "^3.1.1",
     "yup": "^1.1.1"
   },
   "devDependencies": {
+    "@craco/craco": "^7.1.0",
     "@types/node": "^20.1.1",
     "@types/react": "^18.2.6",
     "@types/react-dom": "^18.2.4",
+    "crypto-browserify": "^3.12.0",
     "react-scripts": "5.0.1",
+    "stream-browserify": "^3.0.0",
     "tailwindcss": "^3.3.2"
   },
   "scripts": {
-    "start": "GENERATE_SOURCEMAP=false react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "GENERATE_SOURCEMAP=false craco start",
+    "build": "craco build",
+    "test": "craco test"
   },
   "eslintConfig": {
     "extends": [
